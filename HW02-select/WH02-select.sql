@@ -72,11 +72,11 @@ select
 	DATEPART(quarter, o.OrderDate) as Quarter,
 	case 
 		when DATEPART(month, o.OrderDate) BETWEEN 1 and 4
-		then '1'
+		then 1
 		when DATEPART(month, o.OrderDate) BETWEEN 5 and 8
-		then '2'
+		then 2
 		when DATEPART(month, o.OrderDate) BETWEEN 9 and 12
-		then '3'
+		then 3
 		end as 'Third of the year',
 		c.CustomerName as Customer
 from Sales.Orders as o
